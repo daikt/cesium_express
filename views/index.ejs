@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="/Cesium/Widgets/widgets.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div id="cesium" class="cesium"></div>
+    <script src="/Cesium/Cesium.js"></script>
+    <script src="/dist/jquery.min.js"></script>
+    <script src="/javascripts/main.js"></script>
+    <div id="fileNameList">
+      <% var cnt=0; %>
+      <% fileNameList.forEach(function(fileName) { %>
+        <input type="hidden" id="fn<%= cnt++ %>" value="<%= fileName %>">
+      <% }); %>
+    </div>
+  </body>
+</html>
